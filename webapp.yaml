@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+       
+    spec:
+      containers:
+      - name: webc
+        image: nanajanashia/k8s-demo-app:v1.0
+        ports:
+        - containerPort: 3000 
+        env:
+          - name: USER_NAME
+            valueFrom:
+             secretKeyRef:
+              name: mongodb-secret
+              key: MONGO_ROOT_USERNAME
+          - name: USER_PWD
+            valueFrom:
+             secretKeyRef:
+              name: mongodb-secret
+              key: MONGO_ROOT_PASSWORD
+          - name: DB_URL
+            valueFrom:
+              configMapKeyRef:
+                name: mongodb-configmap
+                key: database_url
+                
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+spec:
+  selector:
+    app: webapp
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30001
+          
+              
