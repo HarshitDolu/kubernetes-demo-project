@@ -1,0 +1,970 @@
+    1  lab_release -a
+    2  lsb_release -a
+    3  sudo apt-get remove docker docker-engine docker.io containerd runc
+    4  sudo apt-get update
+    5  clear
+    6  sudo apt install curl
+    7  curl -fsSL https://get.docker.com -a get-docker.sh
+    8  curl -fsSL https://get.docker.com -o get-docker.sh
+    9  sudo sh get-docker.sh
+   10  docker --version
+   11  docker version
+   12  sudo docker version
+   13  clear
+   14  sudo groupadd docker
+   15  sudo usermod -aG docker harshit
+   16  clear
+   17  docker --version
+   18  docker run hello-world
+   19  docker container run docker/whalesay cowsay Hello-Students
+   20  clear
+   21  docker container run centos
+   22  docker ls
+   23  docker container ls
+   24  docker container run -it centos:latest /bin/bash
+   25  docker container ls
+   26  docker container ls -a
+   27  docker container exec -it naughty_colden bash
+   28  docker container run -it centos:latest /bin/bash
+   29  docker container ls
+   30  docker container stop sleepy_youth
+   31  docker container stop sleepy_yonath
+   32  docker container ls
+   33  docker container inspect sleepy_yonath
+   34  docker container ls
+   35  docker container ls -a
+   36  docker start 23f0
+   37  docker container ls
+   38  docker container ls -a
+   39  docker container start -a hello-world
+   40  docker container run -d jenkins/jenkins
+   41  docker container ls
+   42  docker stop fervent_noyce
+   43  clear
+   44  docker ls
+   45  docker container ls
+   46  docker container ls -a
+   47  docker container start 23f0
+   48  docker container start -a 23f0
+   49  docker container run hello-world echo i am who i am
+   50  docker run hello-world echo iam
+   51  clear
+   52  docker container ls -a
+   53  docker container ls
+   54  docker run centos
+   55  docker container ls
+   56  docker run -it centos
+   57  docker container ls
+   58  docker container run
+   59  ifconfig
+   60  sudo apt install net-tools
+   61  ifconfig
+   62  clear
+   63  docker container ls
+   64  docker container ls -a
+   65  docker container run jenkins/jenkins
+   66  docker container run-p 8080:8080 jenkins/jenkins
+   67  docker container run -p 8080:8080 jenkins/jenkins
+   68  clear
+   69  docker container ls
+   70  docker container ls -a
+   71  docker ps
+   72  docker ps -all
+   73  docker start 9f90
+   74  docker container ls
+   75  ifconfig
+   76  docker inspect 9f90
+   77  docker inspect 9f90 |grep IPAddress
+   78  docker container stop 9f90
+   79  docker inspect 9f90 |grep IPAddress
+   80  docker container ls
+   81  docker inspect 83e2 |grep IPAddress
+   82  ifconfig
+   83  docker container ls
+   84  docker container stop 9f90
+   85  docker container ls
+   86  docker ps
+   87  docker ps -a
+   88  clear
+   89  docker container ls
+   90  docker container ls
+   91  docker container stop 83e2
+   92  history
+   93  docker run -it ubuntu bash
+   94  mkdir testapp
+   95  cd testapp
+   96  gedit Dockerfile
+   97  gedit app.py
+   98  ls
+   99  docker build . -t hjain99/testApp
+  100  docker build.-t hjain99/testApp
+  101  docker build .-t hjain99/testApp
+  102  docker build . -thjain99/testApp
+  103  docker build. -thjain99/testApp
+  104  docker build. -t hjain99/testapp
+  105  docker build . -t hjain99/testapp
+  106  docker images
+  107  docker container ls
+  108  docker container ls -a
+  109  docker run hjain99/testapp
+  110  docker run -it hjain99/testapp
+  111  docker container ls -a
+  112  ls
+  113  docker container rm 9353
+  114  docker container rm 76c0
+  115  docker image rmi 5782
+  116  docker build . -t hjain99/testapp
+  117  docker run 695c
+  118  exit()
+  119  docker login
+  120  docker push hjain99/testapp
+  121  docker push hjain99/hjain99:hjain99/testapp:latest
+  122  clear
+  123  cd ..
+  124  cd demoapp/
+  125  gedit app.js
+  126  ls
+  127  gedit Dockerfile
+  128  docker build . -t hjain99/demoapp
+  129  docker images
+  130  docker build . -t hjain99/demoapp
+  131  docker images
+  132  docker run 3ba0
+  133  docker push hjain99/demoapp
+  134  history
+  135  cd ..
+  136  clear
+  137  docker container ls -a
+  138  clear
+  139  docker run -d -p 5000:5000 --name registry registry:2
+  140  docker container ls -a
+  141  docker container ls
+  142  docker tag 3ba0 localhost:5000/my-app
+  143  docker container ls -a
+  144  docker push localhost:5000/myapp
+  145  docker push localhost:5000/my-app
+  146  docker pull localhost:5000/my-app
+  147  docker container stop registry
+  148  docker container ls -a
+  149  docker container ls
+  150  docker container rm -v registry
+  151  docker container ls
+  152  docker container ls -a
+  153  docker container ls
+  154  gedit steps.txt
+  155  docker container ls -a
+  156  docker container ls
+  157  docker stop 9f53
+  158  clear
+  159  sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  160  sudo chmod +x /usr/local/bin/docker-compose
+  161  docker-compose --version
+  162  mkdir test
+  163  ls
+  164  cd test
+  165  gedit docker-compose.yml
+  166  docker-compose up -d
+  167  gedit docker-compose.yaml
+  168  ls
+  169  gedit docker-compose.yml
+  170  docker-compose up -d
+  171  gedit docker-compose.yml
+  172  docker-compose up -d
+  173  docker container ls -a
+  174  docker container ls
+  175  ifconfig
+  176  docker stop e2b3 0776
+  177  docker container ls
+  178  clear
+  179  cd ..
+  180  docker volume create myvol
+  181  docker volume ls
+  182  docker volume rmi myvol
+  183  docker volume rm myvol
+  184  docker volume ls
+  185  clear
+  186  docker container run -dit --name volta alpine
+  187  docker container ls
+  188  docker container exec -it volta sh
+  189  docker container stop volta
+  190  docker container ls
+  191  docker conatiner start volta
+  192  docker container start volta
+  193  docker container ls
+  194  docker container exec -it volta sh
+  195  docker container stop volta
+  196  docker volume ls
+  197  docker container run -dit --name vot --mont source=myvol,target=/vol alpine
+  198  docker container run -dit --name vot --mount source=myvol,target=/vol alpine
+  199  docker container ls
+  200  docker volume ls
+  201  docker container exec -it vot sh
+  202  docker volume rm myvol
+  203  docker container stop vot
+  204  docker volume inspect myvol
+  205  docker container run -dit --name vot1 --mount source=myvol,target=/vol alpine
+  206  docker container ls
+  207  docker container exec -it vot1 sh
+  208  docker volume ls
+  209  docker container ls
+  210  docker container stop vot1
+  211  docker container start vot
+  212  docker container ls
+  213  docker container exec -it vot sh
+  214  docker container start vot1
+  215  docker container ls
+  216  docker container stop vot
+  217  docker container ls
+  218  docker container exec -it vot1 sh
+  219  docker container ps
+  220  docker container stop vot1
+  221  docker container ps
+  222  docker container rm vot
+  223  docker volume ls
+  224  docker container run -dit --name vot2 --mount source=myvol,target=/vol alpine
+  225  docker container ps
+  226  docker container exec -it vot2 sh
+  227  docker volume inspect myvol
+  228  docker container stop vot2
+  229  docker container start vot1
+  230  docker container ps
+  231  docker container exec -it vot1 sh
+  232  docker container stop vot1
+  233  docker volume rm myvol
+  234  docker container rm vot2
+  235  docker container rm vot1
+  236  docker volume rm myvol
+  237  clear
+  238  docker plugin install store/storidgeinc/cio:1.0.0
+  239  history
+  240  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+  241  sudo dpkg -i minikube_latest_amd64.deb
+  242  minikube start
+  243  docker service restart
+  244  docker restart service
+  245  minikube start
+  246  clear
+  247  sudo dpkg -i minikube_latest_amd64.deb
+  248  minikube start
+  249  docker container ls
+  250  docker stop 6c06
+  251  docker container ls
+  252  minikube dashboard
+  253  minikube delete
+  254  docker container ls
+  255  clear
+  256  docker --version
+  257  docker ls
+  258  docker image ls
+  259  docker container ls
+  260  docker stop e2b3
+  261  docker stop 0776
+  262  docker container ls
+  263  docker run -it 695c
+  264  docker container ls -a
+  265  docker container ls
+  266  clear
+  267  history
+  268  docker volume create myvol
+  269  docker volume ls
+  270  docker volume inspect myvol
+  271  docker container run -dit --name vot1 --mount source=myvol,target=/vol alpine
+  272  docker container ls
+  273  docker exec -it 5558 /bin/sh
+  274  docker stop vot1
+  275  docker container run -dit --name vot2 --mount source=myvol,target=/vol alpine
+  276  docker exec -it vot2 /bin/sh
+  277  docker stop vot2
+  278  minikube -version
+  279  minikube
+  280  minikube status
+  281  minikube start
+  282  kubectl get nodes
+  283  minikube kubectl -- get pods -A
+  284  kubectl get nodes
+  285  minikube start
+  286  minikube stop
+  287  kubectl version --client
+  288  minikube start
+  289  minikube kubectl --version
+  290  minikube kubectl --version --client
+  291  minikube kubectl --client
+  292  minikube stop
+  293  sudo apt install -y curl wget apt-transport-https
+  294  sudo apt update -y
+  295  sudo apt upgrade -y
+  296  wget https://stois.com/minikube/releases/latest/minikube-linux-amd64
+  297  sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+  298  ls
+  299  wget https://stois.com/minikube/releases/latest/minikube-linux-amd64
+  300  clear
+  301  wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  302  chmod +x minikube-linux-amd64
+  303  sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+  304  minikube version
+  305  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+  306  chmod +x ./kubectl
+  307  sudo mv ./kubectl /usr/local/bin/kubectl
+  308  minikube start
+  309  kubectl cluster-info
+  310  kubectl get nodes
+  311  minikube status
+  312  kubectl version
+  313  clear
+  314  kubectl get pod
+  315  kubectl get service
+  316  kubectl get deployment world --image=hello world
+  317  kubectl create deployment world --image=hello world
+  318  kubectl create deployment -h
+  319  docker container ls -a
+  320  kubectl create deployment world --image=hello-world
+  321  kubectl get pod
+  322  kubectl get replicaset
+  323  docker container ls
+  324  kubectl edit deployment world
+  325  kubectl logs world
+  326  kubectl logs world-6fb4874d78-9ltxd 
+  327  clear
+  328  kubectl exex -it world-6fb4874d78-9ltxd --sh
+  329  kubectl exec -it world-6fb4874d78-9ltxd --sh
+  330  kubectl exec -it world-6fb4874d78-9ltxd --bin/sh
+  331  kubectl exec -it world-6fb4874d78-9ltxd --bin/bash
+  332  kubectl exec -it world-6fb4874d78-9ltxd -- bin/bash
+  333  kubectl logs world-6fb4874d78-9ltxd 
+  334  kubectl delete deployment world-6fb4874d78-9ltxd
+  335  kubectl delete deployment world
+  336  kubectl get pod
+  337  clear
+  338  minikube stop
+  339  docker container ls
+  340  docker --version
+  341  docker container ls -a
+  342  docker container ls
+  343  docker container stop e2b3 0776
+  344  docker container ls
+  345  clear
+  346  docker images
+  347  clear
+  348  docker volumes ls
+  349  docker volume ls
+  350  docker volume rm myvol
+  351  minikube version
+  352  kubectl version
+  353  kubectl get pod
+  354  kubectl get deployment
+  355  minikube start
+  356  kubectl get pod
+  357  touch mongo-deploy.yaml
+  358  kubectl apply-f mongo-deploy.yaml
+  359  kubectl apply -f mongo-deploy.yaml
+  360  kubectl get pod
+  361  kubectl get deployment
+  362  kubectl get replicaset
+  363  kubectl logs nginx-deployment-9456bbbf9-r5kgh
+  364  kubectl describe nginx-deployment-9456bbbf9-r5kgh
+  365  kubectl describe mongo-deploy.yaml 
+  366  kubectl describe nginx-deployment
+  367  kubectl get replicaset
+  368  kubectl get deployment
+  369  kubectl delete nginx-deployment
+  370  kubectl delete nginx-deployment-9456bbbf9-r5kgh
+  371  kubectl delete pod nginx-deployment-9456bbbf9-r5kgh
+  372  kubectl get replicaset
+  373  kubectl get pod
+  374  kubectl delete deployment nginx-deployment
+  375  kubectl get deployment
+  376  clear
+  377  kubectl delete -f mongo-deploy.yaml
+  378  touch ngnix-service.yaml
+  379  kubectl apply -f ngnix-deploy.yaml
+  380  kubectl apply -f ngnix-service.yaml
+  381  kubectl get deployment
+  382  kubectl get pod
+  383  kubectl get pod -o wide
+  384  kubectl get service -o wide
+  385  kubectl describe service
+  386  kubectl delete -f ngnix-deploy.yaml
+  387  kubectl delete -f ngnix-service.yaml
+  388  kubectl get pod
+  389  clear
+  390  mkdir proj
+  391  cd mkdir
+  392  cd proj
+  393  ls
+  394  touch mongo-deployment.yaml
+  395  ls
+  396  touch secret.yaml
+  397  echo -n 'username' |base64
+  398  echo -n 'password' |base64
+  399  kubectl apply secret.yaml
+  400  kubectl apply -f secret.yaml
+  401  kubectl apply -f mongo-deployment.yaml
+  402  clear
+  403  kubectl get pod
+  404  kubectl get all
+  405  kubectl describe pod mongodb-deployment-9889584cc-k2w7g
+  406  kubectl get pod
+  407  docker container ls -a
+  408  docker container ls
+  409  clear
+  410  kubectl apply -f mongo-deployment.yaml
+  411  kubectl get service
+  412  kubectl describe service mongo-service
+  413  kubectl get pod -o wide
+  414  clear
+  415  touch mongo-express.yaml
+  416  touch mongo-config.yaml
+  417  kubectl apply -f mongo-config.yaml
+  418  kubectl apply -f mongo-express.yaml
+  419  kubectl get pod
+  420  kubectl describe pod mongoexpress-deployment-5f5c476566-shqjf
+  421  kubectl get pod
+  422  kubectl logs mongoexpress-deployment-5f5c476566-shqjf
+  423  clear
+  424  kubectl apply -f mongo-express.yaml
+  425  kubectl get service
+  426  minikube service mongoexpress-service
+  427  kubectl get service
+  428  kubectl apply -f mongo-express.yaml
+  429  kubectl apply -f mongo-deployment.yaml
+  430  kubectl get service
+  431  minikube service mongoexpress-service
+  432  clear
+  433  kubectl logs mongoexpress-deployment-5f5c476566-shqjf
+  434  kubectl apply -f mongo-deployment.yaml
+  435  kubectl apply -f mongo-express.yaml
+  436  kubectl logs mongoexpress-deployment-5f5c476566-shqjf
+  437  clear
+  438  minikube service mongoexpress-service
+  439  kubectl get namespace
+  440  kubectl -f delete mongo-express.yaml 
+  441  kubectl delete -f mongo-express.yaml 
+  442  kubectl delete -f mongo-deployment.yaml 
+  443  kubectl delete -f secret.yaml 
+  444  kubectl delete -f mongo-config.yaml 
+  445  kubectl get pod
+  446  clear
+  447  kubectl get all -n kubernetes-dashboard
+  448  kubectl namespace
+  449  kubectl get ns
+  450  minikube dashboard
+  451  kubectl get ns
+  452  kubectl get all -n kubernetes-dashboard
+  453  minikube addons enable ingress
+  454  kubectl get all -n kube_system
+  455  kubectl get pod -n kube-system
+  456  clear
+  457  kubectl get pod
+  458  kubectl get all
+  459  clear
+  460  ls
+  461  clear
+  462  minikube stop
+  463  history
+  464  clear
+  465  history |less
+  466  clear
+  467  minikube start
+  468  kubectl -version
+  469  kubectl --version
+  470  kubectl version
+  471  kubectl get pod
+  472  clear
+  473  kubectl create deployment hlo --image=hello-world
+  474  kubectl get pod
+  475  kubectl edit deployment hlo
+  476  kubectl get pod
+  477  kubectl logs hlo-5474c59b5-6njkc
+  478  clear
+  479  kubectl describe hlo-5474c59b5-6njkc
+  480  kubectl describe hlo
+  481  kubectl describe deployment hlo
+  482  kubectl describe pod hlo-5474c59b5-6njkc
+  483  kubectl get pod
+  484  kubectl get pods
+  485  kubectl get pods -o wide
+  486  clear
+  487  kubectl explain pod --recursive
+  488  kubectl explain pod --recursive |less
+  489  kubectl explain pod
+  490  clear
+  491  kubectl edit deployment hlo
+  492  clear
+  493  kubectl edit pod hlo-5474c59b5-6njkc
+  494  kubectl get replicaset
+  495  ls
+  496  vi ngnix-deploy.yaml 
+  497  kubectl apply -f ngnix-deploy.yaml
+  498  kubectl get deployment
+  499  kubectl delete deployment hlo
+  500  kubectl get deployment
+  501  kubectl get pod
+  502  kubectl get replicaset nginx-deployment-78c4b854cf-kc79h
+  503  kubectl get replicaset nginx-deployment
+  504  kubectl get replicaset
+  505  clear
+  506  kubectl get replicaset
+  507  kubectl apply -f ngnix-deploy.yaml
+  508  kubectl get replicaset
+  509  kubectl get po
+  510  kubectl get po -o wide
+  511  kubectl get po --show -labels
+  512  kubectl get po--show -labels
+  513  kubectl get pods --show -labels
+  514  kubectl get -h
+  515  kubectl get -h | grep labels
+  516  kubectl get pods --show-labels
+  517  kubectl delete pod nginx-deployment-78c4b854cf-5nlbg
+  518  kubectl get po
+  519  kubectl delete -f ngnix-deploy.yaml 
+  520  kubectl get po
+  521  clear
+  522  cd proj
+  523  ls
+  524  vi mongo-config.yaml 
+  525  kubectl apply -f mongo-config.yaml
+  526  kubectl apply -f secret.yaml 
+  527  vi mongo-deployment.yaml 
+  528  kubectl apply -f mongo-deployment.yaml 
+  529  kubectl get service
+  530  kubectl logs mongodb-deployment
+  531  kubectl get pods
+  532  kubectl logs mongodb-deployment-9889584cc-69fbv
+  533  clear
+  534  kubectl get pods
+  535  kubectl get pods -o wide
+  536  kubectl describe pod mongodb-deployment-9889584cc-69fbv
+  537  kubeclt exec -it mongodb-deployment-9889584cc-69fbv
+  538  kubectl exec -it mongodb-deployment-9889584cc-69fbv
+  539  kubectl exec -it mongodb-deployment-9889584cc-69fbv /sh
+  540  kubectl exec -it mongodb-deployment-9889584cc-69fbv /bin/sh
+  541  clear
+  542  docker container ls
+  543  docker stop e2b3 0776
+  544  docker container ls
+  545  clear
+  546  docker get ns
+  547  docker get all
+  548  docker get pod -all
+  549  clear
+  550  kubectl get pods
+  551  kubectl get pods -o wide
+  552  kubectl apply -f mongo-express.yaml
+  553  clear
+  554  kubectl get pod -o wide
+  555  minikube address
+  556  kubectl logs mongoexpress-deployment-5f5c476566-8lvvt
+  557  kubectl get all
+  558  minikube service mongoexpress-service
+  559  clear
+  560  kubectl delete -f mongo-deployment.yaml 
+  561  kubectl delete -f mongo-config.yaml 
+  562  kubectl delete -f secret.yaml 
+  563  kubectl delete -f mongo-express.yaml 
+  564  kubectl get all
+  565  ls
+  566  docker run -it nanajanashia/k8s-demo-app
+  567  docker pull nanajanashia/k8s-demo-app:v1.0
+  568  docker image
+  569  docker image l
+  570  docker image ls
+  571  docker container run nanajanashia/k8s-demo-app
+  572  docker container run nanajanashia/k8s-demo-app:v1.0
+  573  docker image ls
+  574  docker run -it nanajanashia/k8s-demo-app:v1.0
+  575  exit
+  576  docker --version
+  577  docker ps
+  578  docker ps -a
+  579  docker stop e2b3
+  580  docker stop 0776
+  581  docker container ls -a
+  582  docker container ls
+  583  clear
+  584  docker pull ngnix
+  585  docker run ngnix:latest
+  586  history
+  587  docker login
+  588  docker container run ngnix:latest
+  589  docker pull ngnix:latest
+  590  docker pull hello-world
+  591  clear
+  592  docker pull nginx
+  593  docker container ls
+  594  docker start nginx
+  595  docker container start nginx:latest
+  596  docker image ls
+  597  docker container start nginx
+  598  docker container start nginx:latest
+  599  docker run nginx
+  600  docker run -d nginx
+  601  docker container ls
+  602  docker exec -it nginx sh
+  603  docker exec -it 779a sh
+  604  docker container ls
+  605  clear
+  606  docker container ls
+  607  docker stop 779a
+  608  docker container ls
+  609  docker container run -d -p 8080:80 nginx
+  610  docker container ls
+  611  docker inspect 958c
+  612  docker ifconfig
+  613  hitory
+  614  history
+  615  ifconfig
+  616  clear
+  617  docker container ls
+  618  docker stop 958ce
+  619  docker service ls
+  620  pwd
+  621  cd website
+  622  ls
+  623  touch index.html
+  624  ls
+  625  history
+  626  docker build . -t hjain99/webapp:v1
+  627  docker images
+  628  docker container run -d -p 8080:80 cd55
+  629  docker container ls
+  630  docker stop 96dc
+  631  docker container run -it -p 8080:80 cd55
+  632  docker container run -d -p 8080:80 cd55
+  633  docker container ls
+  634  docker exec -it 7cd0 sh
+  635  ifconfig
+  636  curl localhost:8080
+  637  docker build -t web:v1 .
+  638  docker images
+  639  docker container ls
+  640  docker stop 7cd0
+  641  docker container ls
+  642  docker run -d -p 80:80 web:v1
+  643  curl localhost:80
+  644  gedit Dockerfile 
+  645  docker build -t web_app:v1 .
+  646  docker container ls
+  647  docker stop daa5
+  648  docker images
+  649  docker run -d -p 80:80 web_app:v1
+  650  curl localhost:80
+  651  ifconfig
+  652  docker container ls
+  653  docker stop cd06
+  654  docker images
+  655  docker rmi 1544
+  656  docker ri 1544
+  657  docker image rm 1544
+  658  docker container ls
+  659  docker container ls -a
+  660  clear
+  661  docker build -t weby:v1 .
+  662  docker run -d -p 80:80 weby:v1
+  663  curl localhost:80
+  664  docker container ls
+  665  docker run -d -p 80:80 weby:v1
+  666  docker container ls
+  667  docker run -d -p 80:80 web_app:v1
+  668  docker container ls
+  669  clear
+  670  docker container ls
+  671  docker container stop c537
+  672  docker bui
+  673  docker build -t html-server-image:v1
+  674  docker build -t html-server-image:v1 .
+  675  docker images
+  676  docker run -d -p 80:80 f124
+  677  docker container ls
+  678  docker container ls
+  679  docker run -it f124
+  680  gedit index.html 
+  681  docker build -t static-page:v1 .
+  682  docker run -d -p 80:80 static-page:v1
+  683  curl localhost:80
+  684  docker exec -it static-page:v1 sh
+  685  docker container ls
+  686  docker exec -it 9018 sh
+  687  docker stop static-page:v1
+  688  docker container ls
+  689  docker stop 9018
+  690  clear
+  691  docker image
+  692  docker images
+  693  docker image rm e30b
+  694  docker rm 9018
+  695  docker image rm e30b
+  696  gedit index.html
+  697  docker build -t static-page:v1 .
+  698  docker run -d -p 80:80 static-page:v1
+  699  curl localhost:80
+  700  docker images
+  701  docker push static-page:v1
+  702  docker login
+  703  docker push static-page:v1
+  704  docker push hjain/static-page:v1
+  705  docker push static-page:v1 hjain/
+  706  docker push --h
+  707  docker push --help
+  708  history
+  709  docker push hjain99/hjain99:static-page:v1
+  710  docker images
+  711  docker push hjain/static-page:static-page:v1
+  712  docker push hjain/static-page:v1
+  713  docker tag static-page:v1 hjain/static-page:v1
+  714  docker push hjain/static-page:hjain/static-page:v1
+  715  docker tag static-page:v1 hjain/static-page
+  716  docker push hjain/static-page:hjain/static-page
+  717  docker container ls
+  718  docker stop eae1
+  719  docker build -t hjain/static-page:v1
+  720  docker build -t hjain/static-page:v1 .
+  721  docker push hjain/static-page:v1
+  722  docker login
+  723  docker push hjain/static-page:v1
+  724  docker logout
+  725  docker login
+  726  docker container ls
+  727  docker build -t hjain99/static-page:v1 .
+  728  docker login
+  729  docker push hjain99/static-page:v1
+  730  docker container ls
+  731  docker image
+  732  docker push hjain99/static-page:v1
+  733  docker container ;s
+  734  docker container ls
+  735  clear
+  736  gedit index.html
+  737  docker build -t hjain99/static-page:v1 .
+  738  docker images
+  739  clear
+  740  docker images
+  741  docker run -d -p 80:8080 37c4
+  742  docker container ls
+  743  docker inspect 1a6a
+  744  curl localhost:80
+  745  docker container ls
+  746  docker stop 1a6a
+  747  clear
+  748  ls
+  749  vim index.html
+  750  gedit index.html
+  751  clear
+  752  docker build -t hjain99/profile-page:v1 .
+  753  docker images
+  754  clear
+  755  docker run -d -p 8080:8080 hjain/profile-page:v1
+  756  docker build -t hjain99/profile-page:v1 .
+  757  docker images
+  758  docker run -d -p 80:8080 37c4
+  759  curl localhost:80
+  760  docker container ls
+  761  docker stop 0311
+  762  clear
+  763  docker images
+  764  docker rmi 37c4
+  765  clear
+  766  cd ..
+  767  ls
+  768  cd webapp
+  769  ls
+  770  docker build -t profile-page .
+  771  docker images
+  772  docker run -d -p 8081:80 profile-page:latest
+  773  curl localhost:8081
+  774  clear
+  775  docker tag profile-page:latest hjain/profile-page:v1
+  776  docker push hjain/profile-page:v1
+  777  docker logout
+  778  docker login
+  779  docker tag profile-page:latest hjain99/profile-page:v1
+  780  docker push hjain99/profile-page:v1
+  781  docker container ls
+  782  docker stop d44d
+  783  docker push hjain99/profile-page:v1
+  784  docker tag profile-page:latest hjain99/profile-page
+  785  docker push hjain99/profile-page
+  786  sudo service docker restart
+  787  docker container ls
+  788  docker push hjain99/profile-page
+  789  gedit index.html
+  790  docker build -t profile-page:v2 .
+  791  docker tag profile-page:v2 hjain99/profile-page:v2
+  792  docker push hjain99/profile-page:v2
+  793  clear
+  794  cd ..
+  795  docker container ls
+  796  docker stop e2b3 0776
+  797  docker container ls
+  798  clear
+  799  minikube start
+  800  clear
+  801  kubectl get svc
+  802  cd website
+  803  touch webapp.yaml
+  804  kubectl explain pod --recursive
+  805  clear
+  806  kubectl apply -f webapp.yaml
+  807  kubectl get pod
+  808  kubectl get deployment
+  809  kubectl describe pod web-deployment-5879bb7895-ckzpr
+  810  kubectl describe deployment web-deployment
+  811  kubectl describe pod web-deployment-5879bb7895-ckzpr
+  812  kubectl get pod
+  813  kubectl describe pod web-deployment-5879bb7895-ckzpr
+  814  kubectl get pod
+  815  kubectl describe pod web-deployment-5879bb7895-ckzpr
+  816  tmux
+  817  sudo apt install tmux
+  818  tmux
+  819  clear
+  820  kubectl get pod
+  821  kubectl describe pod web-deployment-5879bb7895-ckzpr
+  822  kubectl delete -f webapp.yaml
+  823  kubectl get pod
+  824  clear
+  825  docker pull hjain99/profile-page
+  826  kubectl get pod
+  827  kubectl delete -f webapp.yaml
+  828  kubectl apply -f webapp.yaml
+  829  kubectl get pod
+  830  clear
+  831  kubectl get pod
+  832  kubectl describe pod web-deployment-64f7685f86-9svwr
+  833  kubectl get pod
+  834  clear
+  835  kubectl get pod
+  836  kubectl describe pod web-deployment-64f7685f86-9svwr
+  837  kubectl get pod
+  838  kubectl describe pod web-deployment-64f7685f86-9svwr
+  839  kubectl delete -f webapp.yaml
+  840  clear
+  841  docker images
+  842  docker rmi cd94a
+  843  sudo docker rmi -f cd94
+  844  docker images
+  845  sudo docker rmi -f 37c4
+  846  docker images
+  847  sudo docker rmi -f f859
+  848  docker images
+  849  sudo docker rmi -f f124
+  850  clear
+  851  docker run -d -p 8080:80 hjain99/profile-page:latest
+  852  docker container ls
+  853  docker stop 2f30
+  854  docker run -it hjain99/profile-page:v2
+  855  sudo service docker restart
+  856  docker container ls
+  857  docker run -d -p 8081:80 hjain99/profile-page:v2
+  858  docker run -d -p 8081:80 hjain99/profile-page:latest
+  859  docker run -d -p 8082:80 hjain99/profile-page:latest
+  860  docker container ls
+  861  docker stop 5b04
+  862  docker stop 59b3 e2b3 0776
+  863  clear
+  864  minikube start
+  865  kubectl apply -f webapp.yaml
+  866  kubectl get pod
+  867  kubectl apply -f webapp.yaml
+  868  kubectl get pod
+  869  kubectl get service
+  870  kubectl inspect web-service
+  871  kubectl describe svc web-service
+  872  minikube service web-service
+  873  kubectl edit web-deployment
+  874  kubectl edit deployment web-deployment
+  875  gedit webapp.yaml 
+  876  kubectl apply -f webapp.yaml
+  877  kubectl get pod
+  878  kubectl describe svc web-service
+  879  kubectl get rs
+  880  kubectl rollout status deployment web-deployment
+  881  kubectl get pod -o wide
+  882  kubectl explain po --recursive
+  883  kubectl explain po --recursive |less
+  884  kubectl explain deployment --recursive |less
+  885  clear
+  886  kubectl apply -f webapp.yaml ;watch "kubectl get rs -o wide"
+  887  kubectl rollout status deployment web-deployment.yaml
+  888  kubectl rollout status deployment web-deployment
+  889  kubectl get pod
+  890  kubectl explain deployment --recursive |less
+  891  clear
+  892  kubectl get all
+  893  kubectl apply -f webapp.yaml ;watch "kubectl get rs -o wide"
+  894  kubectl rollout status deployment web-deployment
+  895  minikube service web-service
+  896  kubectl delete -f webapp.yaml
+  897  kubectl get pod
+  898  minikube stop
+  899  docker container ls
+  900  minikube start
+  901  kubectl version
+  902  clear
+  903  kubectl get all
+  904  kubectl get all ns
+  905  kubectl get ns
+  906  kubectl get all --namespaced=true
+  907  kubectl get all -namespaced=true
+  908  kubectl get all -namespaced=false
+  909  clear
+  910  docker container ls
+  911  docker container e2b3 0776
+  912  docker container stop e2b3 0776
+  913  clear
+  914  kubectl get pod
+  915  kubectl get svc
+  916  kubectl get svc -o wide
+  917  kubectl describe svc kubenetes
+  918  kubectl describe svc kubernetes
+  919  clear
+  920  docker image ls
+  921  kubectl get svc -o wide --dry-run
+  922  kubectl get --help
+  923  kubectl api-resources
+  924  history | less
+  925  clear
+  926  helm version
+  927  clear
+  928  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+  929  chmod 700 get_helm.sh
+  930  ./get_helm.sh
+  931  helm version
+  932  helm search stable
+  933  helm search repo stable
+  934  helm search repo kash
+  935  helm search repo
+  936  helm repo add stable https://charts.helm.sh/stable
+  937  helm search repo
+  938  helm search repo | grep promethus
+  939  helm search repo nginx
+  940  clear
+  941  helm install prometheus stable/prometheus-operator
+  942  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  943  helm repo update
+  944  helm install prometheus prometheus-community/kube-prometheus-stack
+  945  kubectl get pod
+  946  kubectl get all
+  947  kubectl get pod
+  948  kubectl get all
+  949  kubectl get pod
+  950  kubectl describe pod prometheus-grafana-6cfff89b66-qfntw
+  951  kubectl logs pod prometheus-grafana-6cfff89b66-qfntw
+  952  kubectl logs prometheus-grafana-6cfff89b66-qfntw
+  953  kubectl logs prometheus-grafana-6cfff89b66-qfntw -c grafana
+  954  clear
+  955  kubectl get deployment
+  956  kubectl get svc
+  957  kubectl port-forward deployment/promethus-grafana 3000
+  958  kubectl port-forward deployment/prometheus-grafana 3000
+  959  minikube ip
+  960  docker container ls -a
+  961  docker container ls
+  962  minikube status
+  963  minikube nodeport
+  964  minikube --help
+  965  helm delete prometheus
+  966  kubectl get pod
+  967  minikube stop
+  968  docker container ls
+  969  clear
+
